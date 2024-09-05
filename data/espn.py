@@ -52,6 +52,7 @@ class EspnFantasy:
                                         team.wins,
                                         team.ties,
                                         team.losses,
-                                        (team.wins + 0.5 * team.ties) / (team.wins + team.ties + team.losses),
+                                        (team.wins + 0.5 * team.ties) / (team.wins + team.ties + team.losses)
+                                        if (team.wins + team.ties + team.losses) != 0 else '0.00%',
                                         team.standing)
                           for team in self.league.standings()])
