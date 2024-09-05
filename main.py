@@ -10,8 +10,10 @@ from version import __version__
 def main():
     if '--espn' in sys.argv:
         fantasy = EspnFantasy()
+        fantasy.print()
     elif '--yahoo' in sys.argv:
         fantasy = YahooFantasy()
+        fantasy.print()
     else:
         SystemExit('Platform not supported')
 
